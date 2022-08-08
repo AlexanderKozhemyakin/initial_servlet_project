@@ -6,11 +6,31 @@
     <display-name>test project</display-name>
     <servlet>
         <servlet-name>Main</servlet-name>
-        <jsp-file>/WEB-INF/Main.jsp</jsp-file>
+<!--        <jsp-file>/Main.jsp</jsp-file>-->
         <servlet-class>MainServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Main</servlet-name>
         <url-pattern>/main</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>Catalog</servlet-name>
+        <jsp-file>/catalog.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Catalog</servlet-name>
+        <url-pattern>/catalog</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Cart</servlet-name>
+        <jsp-file>/cart.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Cart</servlet-name>
+        <url-pattern>/cart</url-pattern>
+    </servlet-mapping>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error-404.html</location>
+    </error-page>
 </web-app>
