@@ -10,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 
 @WebServlet("/main")
 public class MainServlet extends HttpServlet {
+
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         final Logger logger = LogManager.getLogger(MainServlet.class);

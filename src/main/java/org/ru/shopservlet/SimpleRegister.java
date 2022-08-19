@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/simple_register")
-public class simple_register extends HttpServlet {
+public class SimpleRegister extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String first_name = request.getParameter("first_name");
@@ -23,7 +23,7 @@ public class simple_register extends HttpServlet {
         if(first_name.isEmpty() || last_name.isEmpty() || username.isEmpty() ||
                 password.isEmpty() || address.isEmpty() || contact.isEmpty())
         {
-            RequestDispatcher req = request.getRequestDispatcher("register_form.jsp");
+            RequestDispatcher req = request.getRequestDispatcher("registerFrame.jsp");
             req.include(request, response);
         }
         else
