@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet("/catalog")
+@WebServlet("/shopservletapp/catalog")
 public class Catalog extends HttpServlet {
     private List<String> catalog = List.of("Table white","Chair black","Door yellow");
     @Override

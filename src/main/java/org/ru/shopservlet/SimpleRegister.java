@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/simple_register")
+@WebServlet("/shopservletapp/SimpleRegister")
 public class SimpleRegister extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,12 +23,12 @@ public class SimpleRegister extends HttpServlet {
         if(first_name.isEmpty() || last_name.isEmpty() || username.isEmpty() ||
                 password.isEmpty() || address.isEmpty() || contact.isEmpty())
         {
-            RequestDispatcher req = request.getRequestDispatcher("registerFrame.jsp");
+            RequestDispatcher req = request.getRequestDispatcher("/shopservletapp/registerFrame.jsp");
             req.include(request, response);
         }
         else
         {
-            RequestDispatcher req = request.getRequestDispatcher("registered.jsp");
+            RequestDispatcher req = request.getRequestDispatcher("/shopservletapp/registered.jsp");
             req.forward(request, response);
         }
     }

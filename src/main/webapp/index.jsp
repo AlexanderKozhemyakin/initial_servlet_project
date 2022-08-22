@@ -1,12 +1,24 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <title>Shop S-mart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>T-shirts shop</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-    <iframe src="headFrame.jsp" width="100%" height="10%"></iframe>
-    <iframe src="OneFileUpload.html" width="100%" height="10%"></iframe>
-    <iframe src="TwoFilesUpload.html" width="100%" height="10%"></iframe>
-    <iframe src="infoFrame.jsp" width="30%" height="100%"></iframe>
-    <iframe src="registerFrame.jsp" width="65%" height="100%"></iframe>
+    <div class="headFrameContainer">
+        <iframe class="headFrame" frameborder="0" src="headFrame.jsp" sandbox="allow-same-origin"></iframe>
+    </div>
+    <div class="oneFileUploadContainer">
+        <iframe class="oneFileUpload" frameborder="0" src="OneFileUpload.html" sandbox="allow-same-origin"></iframe>
+    </div>
+    <div class="twoFilesUploadContainer">
+        <iframe class="twoFilesUpload" frameborder="0" src="TwoFilesUpload.html" sandbox="allow-same-origin"></iframe>
+    </div>
+    <div class="infoFrameContainer">
+        <iframe class="infoFrame" frameborder="0" src="infoFrame.jsp" sandbox="allow-same-origin"></iframe>
+    </div>
+    <div class="registerFrameContainer">
+        <iframe class="registerFrame" frameborder="0" src="registerFrame.jsp" sandbox="allow-same-origin"></iframe>
+    </div>
 </html>

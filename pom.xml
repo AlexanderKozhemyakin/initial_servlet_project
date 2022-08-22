@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>shopservetapp</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>shopservletapp</artifactId>
+    <version>1</version>
     <packaging>war</packaging>
     <name>shopservletapp</name>
-    <url>http://localhost:8080/index.jsp</url>
+    <url>http://localhost:8080/shopservletapp-1/</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,9 +25,15 @@
         <log4j-api.version>2.18.0</log4j-api.version>
         <javax.servlet-api.version>1</javax.servlet-api.version>
         <tomcat7-maven-plugin.version>2.2</tomcat7-maven-plugin.version>
+        <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-dependency-plugin</artifactId>
+            <version>${maven-dependency-plugin.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -69,7 +75,6 @@
     </dependencies>
 
     <build>
-        <finalName>shopservletapp</finalName>
         <pluginManagement>
             <plugins>
                 <plugin>
@@ -78,10 +83,10 @@
                     <version>${tomcat7-maven-plugin.version}</version>
                     <configuration>
                         <url>http://localhost:8080/manager/text</url>
-                        <server>maven-tomcat-war-deployment-server</server>
-                        <path>/index</path>
-                        <username>war-deployer</username>
-                        <password>maven-tomcat</password>
+                        <server>shopservletapp</server>
+                        <path></path>
+                        <username>admin</username>
+                        <password>admin</password>
                     </configuration>
                 </plugin>
             </plugins>

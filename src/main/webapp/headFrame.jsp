@@ -2,8 +2,15 @@
 <html>
 <head>
     <title>head_frame</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+<header>
+    <div class="heading">
+        <div class="heading-wrapper">
+            <h2>T-shirt shop</h2>
+        </div>
+    </div>
+</header>
 <body>
-<h2>Test Project of Shop S-Mart</h2>
 </body>
 </html>

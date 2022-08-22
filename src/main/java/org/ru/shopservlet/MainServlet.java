@@ -18,10 +18,10 @@ public class MainServlet extends HttpServlet {
         logger.debug("DEBUG logging - current url:" + request.getRequestURL());
 
         if (request.getParameter("catalog") != null) {
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/catalog");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/shopservletapp/catalog");
             requestDispatcher.forward(request, response);
         } else if (request.getParameter("cart") != null) {
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/cart");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/shopservletapp/cart");
             requestDispatcher.forward(request, response);
         } else {
             PrintWriter printWriter = response.getWriter();

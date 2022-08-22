@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Collection;
 
-@WebServlet(name="FileUploadServlet", urlPatterns = {"/fileuploadservlet"})
+@WebServlet(name="FileUploadServlet", urlPatterns = {"/shopservletapp/fileuploadservlet"})
 @MultipartConfig(
         fileSizeThreshold = 1024*1024*1, //1MB
         maxFileSize = 1024*1024*30, //30MB
