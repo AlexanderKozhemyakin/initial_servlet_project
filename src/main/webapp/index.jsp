@@ -18,7 +18,7 @@
     <div class="infoFrameContainer">
         <iframe class="infoFrame" frameborder="0" src="infoFrame.jsp" sandbox="allow-same-origin"></iframe>
     </div>
-    <div class="registerFrameContainer">
-        <iframe class="registerFrame" frameborder="0" src="registerFrame.jsp" sandbox="allow-same-origin"></iframe>
+    <div class="loginContainer">
+        <iframe class="loginFrame" frameborder="0" src="Login.html" sandbox="allow-same-origin"></iframe>
     </div>
 </html>

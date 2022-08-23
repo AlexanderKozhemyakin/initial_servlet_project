@@ -1,0 +1,7 @@
+org/ru/shopservlet/ErrorHandlerServlet.class
+org/ru/shopservlet/Catalog.class
+org/ru/shopservlet/AuthUserServlet.class
+org/ru/shopservlet/SimpleRegister.class
+org/ru/shopservlet/MainServlet.class
+org/ru/shopservlet/Cart.class
+org/ru/shopservlet/FileUploadServlet.class

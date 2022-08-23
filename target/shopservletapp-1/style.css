@@ -1,0 +1,48 @@
+.headFrameContainer{
+    position: relative;
+    border: 0;
+    left: 0;
+}
+.headFrame{
+    position: absolute;
+    top: 0;
+    right: 9px;
+    width: 100%;
+    height: 85px;
+    text-align: right;
+    font-size: 20%;
+    background-color: cornflowerblue;
+    border: 0;
+}
+.infoFrame{
+    position: absolute;
+    top: 95px;
+    width: 70%;
+    height: 400px;
+    background-color: white;
+    border: 0;
+}
+.loginFrame{
+    position: absolute;
+    top: 95px;
+    right: 9px;
+    width: 30%;
+    height: 400px;
+    background-color: whitesmoke;
+    border: 0;
+}
+.oneFileUpload{
+    position: absolute;
+    height: 200px;
+    top: 485px;
+    background-color: white;
+    border: 0;
+}
+.twoFilesUpload{
+    position: absolute;
+    height: 200px;
+    top: 485px;
+    left: 300px;
+    background-color: white;
+    border: 0;
+}
