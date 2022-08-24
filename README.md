@@ -17,4 +17,5 @@ firefox --new-tab http://localhost:8080/manager
 
 firefox --new-tab http://localhost:8080/shopservletapp
 
-![Screenshot from 2022-08-22 16-09-27](https://user-images.githubusercontent.com/110842572/185929282-9186e1b7-4c26-485e-aad2-f5b96a5940d4.png)
+Current status of developement:
+![Снимок экрана от 2022-08-24 15-50-06](https://user-images.githubusercontent.com/110842572/186432984-9abffa6f-8af2-4473-8878-4028f7b06599.png)
