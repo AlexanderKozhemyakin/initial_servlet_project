@@ -1,0 +1,17 @@
+target/
+.idea
+.vscode
+*.jar
+*.war
+*.log
+*.iso
+*.exe
+*.class
+*.dll
+*.com
+*.bat
+*.gz
+*.7z
+*.tar
+*.zip
+*.rar
