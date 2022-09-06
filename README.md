@@ -36,5 +36,7 @@ Server Status
 http://localhost:8080/manager/status/all
 http://localhost:8080/manager/status/all?XML=true
 
+/opt/tomcat/bin/shutdown.sh
+
 Current status of developement:
 ![Снимок экрана от 2022-08-24 15-50-06](https://user-images.githubusercontent.com/110842572/186432984-9abffa6f-8af2-4473-8878-4028f7b06599.png)
