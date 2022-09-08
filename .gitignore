@@ -16,5 +16,4 @@ target/
 *.tar
 *.zip
 *.rar
-target/
 *.lst

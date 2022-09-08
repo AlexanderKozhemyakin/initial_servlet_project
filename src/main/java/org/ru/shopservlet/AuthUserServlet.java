@@ -1,6 +1,5 @@
 package org.ru.shopservlet;
 
-// import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
@@ -15,8 +14,7 @@ public class AuthUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        // RequestDispatcher req = request.getRequestDispatcher("/registered.jsp");
-        // req.forward(request, response);
+
         response.setContentType( "text/html" );
         response.setCharacterEncoding( "UTF-8" );
 
@@ -33,9 +31,6 @@ public class AuthUserServlet extends HttpServlet {
             response.addCookie(errorCodeCookie);
             response.sendError(400);
 
-            // PrintWriter printWriter = response.getWriter();
-            // String exceptionResponse = "";
-            // printWriter.println(exceptionResponse);
         } else {
             PrintWriter printWriter = response.getWriter();
             String htmlResponse = "<html><h2>Добро пожаловать," + username + "<br/></html>";
