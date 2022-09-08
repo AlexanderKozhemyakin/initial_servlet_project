@@ -35,7 +35,7 @@ public class FileUploadServlet extends HttpServlet {
                 final String partName = part.getName();
 
                 if(submittedFileName.isBlank()){
-                    printWriter.printf("File nmae is empty for %s", partName);
+                    printWriter.printf("File name is empty for %s", partName);
                 }else{
                     printWriter.printf("getSubmittedFileName: %s, ", submittedFileName);
                     printWriter.printf("getName: %s, ", partName);
