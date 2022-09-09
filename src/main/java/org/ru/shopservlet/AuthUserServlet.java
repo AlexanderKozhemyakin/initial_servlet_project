@@ -22,21 +22,20 @@ public class AuthUserServlet extends HttpServlet {
         response.setContentType( "text/html" );
         response.setCharacterEncoding( "UTF-8" );
 
-        String username = request.getParameter("login");
-        String password = request.getParameter("password");
+        final String USERNAME = request.getParameter("login");
+        final String PASSWORD = request.getParameter("password");
 
 
-        if (username.isEmpty()||password.isEmpty()){
+        if (USERNAME.isEmpty()||PASSWORD.isEmpty()){
 
-            Cookie errorCodeCookie = new Cookie("code", "400" );
+            final Cookie errorCodeCookie = new Cookie("code", "400" );
          
             response.addCookie(errorCodeCookie);
             response.sendError(400);
 
         } else {
-            PrintWriter printWriter = response.getWriter();
-            String htmlResponse = "<html><h2>Добро пожаловать," + username + "<br/></html>";
-            printWriter.println(htmlResponse);
+            final PrintWriter printWriter = response.getWriter();
+            printWriter.println("<html><h2>Добро пожаловать," + USERNAME + "<br/></html>");
         }
     }
 }

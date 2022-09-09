@@ -18,13 +18,13 @@ import org.slf4j.MDC;
 @Slf4j
 @WebFilter(
     filterName = "CalculatorValidator",
-    urlPatterns = "??",
+    urlPatterns = {"/calc"},
     servletNames = "/shopservletapp/calc",
     asyncSupported = true)
 public class RequestsWebFilter implements Filter{
 
     private Pattern patternNumeric = Pattern.compile("-?\\d+(\\.\\d+)?");
-    public boolean isNumeric (String stringNum){
+    private boolean isNumeric (String stringNum){
         if (stringNum==null){
             return false;
         }

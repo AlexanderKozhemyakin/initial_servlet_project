@@ -7,14 +7,19 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 @WebServlet("/shopservletapp/cart")
 public class Cart extends HttpServlet {
-    private List<String> carts = List.of("T-shirt1","T-shirt2","T-shirt3");
+
+    List<String> carts = List.of("T-shirt1","T-shirt2","T-shirt3","T-shirt4","T-shirt5");
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println(carts.get(0));
+
+        final PrintWriter printWriter = response.getWriter();
+        printWriter.println(carts.subList(0,ThreadLocalRandom.current().nextInt(0,carts.size())));
     }
 }

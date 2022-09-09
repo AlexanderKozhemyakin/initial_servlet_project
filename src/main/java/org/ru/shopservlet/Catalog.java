@@ -7,14 +7,19 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 @WebServlet("/shopservletapp/catalog")
 public class Catalog extends HttpServlet {
-    private List<String> catalog = List.of("Table white","Chair black","Door yellow");
+
+    private List<String> catalog = List.of("T-shirt white","T-shirt black","T-shirt yellow","T-shirt green","T-shirt grey","T-shirt blue");
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        PrintWriter printWriter = response.getWriter();
-        printWriter.println(catalog.get(0));
+
+        final PrintWriter printWriter = response.getWriter();
+        printWriter.println(catalog.subList(0,ThreadLocalRandom.current().nextInt(0,catalog.size())));
     }
 }
