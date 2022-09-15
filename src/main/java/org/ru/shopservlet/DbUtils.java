@@ -1,6 +1,15 @@
 package org.ru.shopservlet;
 
 import java.sql.Statement;
+import java.util.ArrayList;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
+import javax.sql.DataSource;
+
+import jakarta.servlet.http.HttpSession;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -16,9 +25,11 @@ public class DbUtils {
     static Connection connection = null;
     static{
         try{
-            Class.forName(DRIVERNAME);
-            connection = DriverManager.getConnection(DBURL, DBUSERNAME, DBPASSWORD);
-        } catch (SQLException | ClassNotFoundException e){
+            Context context = new InitialContext();
+            DataSource dataSource = (DataSource)context.lookup("java:comp/env/jdbc/shopapp");
+            connection = dataSource.getConnection();
+        } catch (NamingException | SQLException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
@@ -49,5 +60,5 @@ public class DbUtils {
             }
         }
     }
-    
+  
 }

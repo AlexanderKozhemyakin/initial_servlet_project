@@ -41,7 +41,7 @@ public class AuthUserServlet extends HttpServlet {
         //printWriter.print(LoginValidate.testCon(USERNAME,PASSWORD));
 
         if(LoginValidate.isValid(USERNAME,PASSWORD)){
-            requestDispatcher = request.getRequestDispatcher("welcome.jsp");
+            requestDispatcher = request.getRequestDispatcher("/welcome");
             requestDispatcher.forward(request, response);
         } else if (USERNAME.isEmpty()||PASSWORD.isEmpty()){
             final Cookie errorCodeCookie = new Cookie("code", "400" );

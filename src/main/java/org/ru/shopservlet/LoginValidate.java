@@ -15,7 +15,9 @@ public class LoginValidate {
         boolean userFounded = false;
 
         try{
-            connection = DbUtils.getConnection();
+            if(connection==null || connection.isClosed()){
+                connection = DbUtils.getConnection();
+            }
     
             preparedStatement = connection.prepareStatement("SELECT 1 FROM WEBUSERS WHERE USERNAME=? AND PASSWORD=?");
             preparedStatement.setString(1, login);

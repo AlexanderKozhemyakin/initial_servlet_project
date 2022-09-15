@@ -7,6 +7,8 @@
     <a href="/shopservletapp/main?catalog=1">Check catalog</a>
     <br>Cart:</br>
     <a href="/shopservletapp/main?cart=1">Check cart</a>
+    <br>Products:</br>
+    <a href="/shopservletapp/productsInfo.jsp">Check products</a>
     <form action="/main" method="get"></form>
 </body>
 </html>
