@@ -3,7 +3,7 @@
     border: 0;
     left: 0;
 }
-.headFrame{
+.calcFrame{
     position: absolute;
     top: 0;
     right: 9px;
@@ -35,7 +35,7 @@
     position: absolute;
     height: 200px;
     top: 485px;
-    background-color: white;
+    background-color: green;
     border: 0;
 }
 .twoFilesUpload{
@@ -43,6 +43,6 @@
     height: 200px;
     top: 485px;
     left: 300px;
-    background-color: white;
+    background-color: yellow;
     border: 0;
 }

@@ -8,16 +8,16 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.extern.slf4j.Slf4j;
 
-@WebServlet("/shopservletapp/calc")
+@Slf4j
+@WebServlet("/calc")
 public class Calculator extends HttpServlet{
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
-        final PrintWriter printWriter = response.getWriter();
-        printWriter.printf("Under construction %s", 1);
-                
-        printWriter.close();
+        final HttpServletResponse res = (HttpServletResponse) response;
+        res.sendRedirect("/shopservletapp/connectionPool");
+
     }
 }

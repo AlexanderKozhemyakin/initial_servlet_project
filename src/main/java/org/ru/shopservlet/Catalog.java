@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-@WebServlet("/shopservletapp/catalog")
+@WebServlet("/catalog")
 public class Catalog extends HttpServlet {
 
     private List<String> catalog = List.of("T-shirt white","T-shirt black","T-shirt yellow","T-shirt green","T-shirt grey","T-shirt blue");

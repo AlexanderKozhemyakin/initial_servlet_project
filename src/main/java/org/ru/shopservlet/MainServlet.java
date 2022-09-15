@@ -17,15 +17,15 @@ public class MainServlet extends HttpServlet {
         log.info(request.getRequestURI());
 
         if (request.getParameter("catalog") != null) {
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/shopservletapp/catalog");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/catalog");
             requestDispatcher.forward(request, response);
         } else if (request.getParameter("cart") != null) {
-            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/shopservletapp/cart");
+            RequestDispatcher requestDispatcher = getServletContext().getRequestDispatcher("/cart");
             requestDispatcher.forward(request, response);
         } else {
             PrintWriter printWriter = response.getWriter();
             printWriter.println("change url request.(it should include ?catalog= or ?cart=) current url:" + request.getRequestURL());
-            printWriter.println("example url: localhost:8080/main?cart=TestCart");
+            printWriter.println("example url: localhost:8080/shopappservletapp/main?cart=TestCart");
             printWriter.close();
         }
     }

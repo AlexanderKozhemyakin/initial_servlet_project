@@ -12,7 +12,9 @@ tomcat 10 and Java 11 installed
 2. Set in pom.xml username and password for tomcat user for deployment
 3. Build project, deploy generated war:
 ```bash
-mvn clean package tomcat7:redeploy; /opt/tomcat/bin/startup.sh
+sudo /opt/tomcat/bin/startup.sh
+java -jar /home/alex/java_projects/h2/h2-2022-06-13/h2/bin/h2-2.1.214.jar
+sudo mvn clean package tomcat7:redeploy
 ```
 4. After deployment open app in browser:
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <Context>
+        <Resource name="jdbc/shopapp"
+                  auth="Container"
+                  description="DB connection"
+                  type="javax.sql.DataSource"
+                  username="sa"
+                  password="as777"
+                  driverClassName="org.h2.Driver"
+                  url="jdbc:h2:tcp://localhost/~/test"
+                  validationQuery="select 1 from dual"
+                  maxActive="5"
+                  maxIdle="4"
+                  maxWait="10000"/>
+</Context>
