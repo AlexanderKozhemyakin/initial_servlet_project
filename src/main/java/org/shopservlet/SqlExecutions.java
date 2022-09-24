@@ -1,4 +1,4 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import java.io.IOException;
 import java.sql.ResultSet;

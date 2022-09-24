@@ -1,4 +1,4 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import java.io.BufferedReader;
 import java.io.IOException;

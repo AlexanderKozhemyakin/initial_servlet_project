@@ -1,4 +1,4 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -32,16 +32,6 @@ public class DataSourceUtil {
         dataSource.setJdbcUrl(properties.getProperty(H2URL));
         dataSource.setUsername(properties.getProperty(H2USERNAME));
         dataSource.setPassword(properties.getProperty(H2PASSWORD));
-        // dataSource = new HikariDataSource();
-        // dataSource.setDriverClassName("org.h2.Driver");
-        // dataSource.setJdbcUrl("jdbc:h2:tcp://localhost/~/test");
-        // dataSource.setUsername("sa");
-        // dataSource.setPassword("as777");
-        // dataSource.setMaxLifetime(1000);
-        // dataSource.setMinimumIdle(50);
-        // dataSource.setMaximumPoolSize(10000);
-        // dataSource.setAutoCommit(false);
-        // dataSource.setLoginTimeout(5);
     }
     public static DataSource getDataSource(){
         return dataSource;

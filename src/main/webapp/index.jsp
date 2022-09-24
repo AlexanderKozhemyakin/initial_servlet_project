@@ -1,24 +1,22 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>T-shirts shop</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
-    <div class="headFrameContainer">
-        <iframe class="headFrame" style="border: none;" src="headFrame.jsp" sandbox="allow-forms allow-modals"></iframe>
-    </div>
-    <div class="oneFileUploadContainer">
-        <iframe class="oneFileUpload" style="border: none;" src="OneFileUpload.html" sandbox="allow-forms allow-modals"></iframe>
-    </div>
-    <div class="twoFilesUploadContainer">
-        <iframe class="twoFilesUpload" style="border: none;" src="TwoFilesUpload.html" sandbox="allow-forms allow-modals"></iframe>
-    </div>
-    <div class="infoFrameContainer">
-        <iframe class="infoFrame" style="border: none;" src="infoFrame.jsp" sandbox="allow-forms allow-modals"></iframe>
-    </div>
-    <div class="loginContainer">
-        <iframe class="loginFrame" style="border: none;" src="Login.html" sandbox="allow-forms allow-modals"></iframe>
-    </div>
+    <ol class="rounded">
+        <ul>
+            <li><a href="/shopservletapp/main?catalog" target="_blank">Каталог продукции</a></li>
+            <li><a href="/shopservletapp/main?onefileload" target="_blank">Загрузка Вашего эксиза(печать на 1 стороне)</a></li>
+            <li><a href="/shopservletapp/main?twofilesload" target="_blank">Загрузка Ваших двух эскизов(лицевая и обратная сторона футкболки)</a></li>
+            <li><a href="/shopservletapp/main?cart" target="_blank">Корзина</a></li>
+            <li><a href="/shopservletapp/main?login" target="_blank">Войти</a></li>
+            <li><a href="/shopservletapp/main?logout" target="_blank">Выйти</a></li>
+            <li><a href="/shopservletapp/main?profile" target="_blank">Профиль</a></li>
+            <li><a href="/shopservletapp/main?viewtshirtpictures" target="_blank">PIC</a></li>
+            <li><a href="/shopservletapp/main?productsinfo" target="_blank">tag test</a></li>
+            <li><a href="/shopservletapp/main?about" target="_blank">О нас</a></li>
+        </ul>
+    </ol>
 </html>

@@ -1,4 +1,4 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -17,8 +17,7 @@ public class Welcome extends HttpServlet {
 
         HttpSession session = request.getSession(false);
         final PrintWriter printWriter = response.getWriter();
-        printWriter.println("Welcome!");
-        printWriter.print(session.getAttribute("name"));
+        printWriter.println("Welcome " + session.getAttribute("name") + "!");
         printWriter.close();
     }
 }

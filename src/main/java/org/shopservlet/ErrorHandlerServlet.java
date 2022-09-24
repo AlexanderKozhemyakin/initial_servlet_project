@@ -1,8 +1,10 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+
+import org.h2.engine.Session;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,6 +12,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = "/errorHandler")
 public class ErrorHandlerServlet extends HttpServlet {
@@ -45,6 +48,14 @@ public class ErrorHandlerServlet extends HttpServlet {
             } else {
                 writer.write("No cookies found");
             }
+
+            HttpSession session = request.getSession(false);
+            if (session!=null){
+                session.invalidate();
+            }
+
+            writer.write("<p><p>");
+            writer.write("<h2>You can try again: <a href=\"Login.html\">Войти</a></h2>");
             writer.write("</html></body>");
         }
     }  

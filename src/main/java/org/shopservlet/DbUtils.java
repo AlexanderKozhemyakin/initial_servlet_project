@@ -1,28 +1,24 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import java.sql.Statement;
-import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import jakarta.servlet.http.HttpSession;
-
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class DbUtils {
 
-    private static final String DBURL="jdbc:h2:tcp://localhost/~/test";
+    private static final String DBURL="jdbc:h2:/root/db/shopapp";
     private static final String DBUSERNAME="sa";
     private static final String DBPASSWORD="as777";
     private static final String DRIVERNAME="org.h2.Driver";
 
-    static Connection connection = null;
+    private static Connection connection = null;
     static{
         try{
             Context context = new InitialContext();

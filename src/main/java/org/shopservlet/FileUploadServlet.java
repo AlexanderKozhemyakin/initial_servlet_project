@@ -1,4 +1,4 @@
-package org.ru.shopservlet;
+package org.shopservlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
