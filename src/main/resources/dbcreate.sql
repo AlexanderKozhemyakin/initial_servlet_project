@@ -1,5 +1,5 @@
 drop table products;
-drop table sales;
+drop table orders;
 drop table WEBUSERS;
 drop table PRODUCTS_PICTURES;
 
@@ -9,16 +9,22 @@ create table products (
                           desc varchar(256)
 );
 
-create table sales(
-                      oper_day date not null,
-                      productid INT,
-                      quantity INT,
-                      price INT
+create table orders(
+                       oper_day date not null,
+                       productid INT,
+                       quantity INT,
+                       price NUMERIC,
+                       clientid int
 );
 
 create table WEBUSERS (
-                          USERNAME VARCHAR(100) NOT NULL,
-                          PASSWORD varchar(256)
+                          LOGIN VARCHAR(100) NOT NULL,
+                          PASSWORD varchar(256) NOT NULL,
+                          NAME varchar(256) NOT NULL,
+                          LASTNAME varchar(256),
+                          ADDRESS varchar(512),
+                          EMAIL varchar(256),
+                          CONTACTNUMBER varchar(256) NOT NULL
 );
 
 create table PRODUCTS_PICTURES (
@@ -34,8 +40,6 @@ insert into products(id,name,desc) values (3,'T-SHIRT 3','test good3');
 insert into products(id,name,desc) values (4,'T-SHIRT 4','test good4');
 insert into products(id,name,desc) values (5,'T-SHIRT 5','test good5');
 
-insert into WEBUSERS(USERNAME,PASSWORD) values ('A','B');
-insert into WEBUSERS(USERNAME,PASSWORD) values ('2','2');
-insert into WEBUSERS(USERNAME,PASSWORD) values ('1','1');
+insert into WEBUSERS(USERNAME,PASSWORD,NAME,LASTNAME,ADDRESS,EMAIL,CONTACTNUMBER ) values ('test','test','test','test','test','test@test.ru','test');
 
 insert into PRODUCTS_PICTURES(product_id,title,author,image) values (1,'test title','test author','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII');
