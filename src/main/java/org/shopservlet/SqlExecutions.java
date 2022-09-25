@@ -8,9 +8,9 @@ import org.h2.jdbcx.JdbcConnectionPool;
 
 public class SqlExecutions {
     
-    private ConnectionPoolTest source = new ConnectionPoolTest(JdbcConnectionPool.create("jdbc:h2:mem:database;DB_CLOSE_DELAY=1","",""));
+    private static ConnectionPoolTest source = new ConnectionPoolTest(JdbcConnectionPool.create("jdbc:h2:~/test;DB_CLOSE_DELAY=1","sa","as777"));
     
-    void createDB() throws IOException, SQLException{
+    static void createDB() throws IOException, SQLException{
         new DdInitialize(source).executeSql();
     }
 

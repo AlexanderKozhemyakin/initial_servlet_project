@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Collections;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -21,5 +21,13 @@ public class Cart extends HttpServlet {
 
         final PrintWriter printWriter = response.getWriter();
         printWriter.println(carts.subList(0,ThreadLocalRandom.current().nextInt(0,carts.size())));
+        try {
+            SqlExecutions.createDB();
+            printWriter.println("db recreated");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        printWriter.println("cart ok");
+        printWriter.close();
     }
 }

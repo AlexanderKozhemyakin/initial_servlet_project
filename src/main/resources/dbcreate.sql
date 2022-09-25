@@ -10,7 +10,7 @@ create table products (
 );
 
 create table orders(
-                       oper_day date not null,
+                       operday VARCHAR(50) not null,
                        productid INT,
                        quantity INT,
                        price NUMERIC,
