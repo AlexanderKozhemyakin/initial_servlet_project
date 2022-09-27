@@ -30,6 +30,7 @@ create table WEBUSERS (
 create table PRODUCTS_PICTURES (
                                    product_id INT NOT NULL,
                                    title VARCHAR(100),
+                                   image_file_name VARCHAR(256),
                                    author VARCHAR(256),
                                    image blob
 );
@@ -42,4 +43,4 @@ insert into products(id,name,desc) values (5,'T-SHIRT 5','test good5');
 
 insert into WEBUSERS(USERNAME,PASSWORD,NAME,LASTNAME,ADDRESS,EMAIL,CONTACTNUMBER ) values ('test','test','test','test','test','test@test.ru','test');
 
-insert into PRODUCTS_PICTURES(product_id,title,author,image) values (1,'test title','test author','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII');
+insert into PRODUCTS_PICTURES(product_id,title,image_file_name,author,image) values (1,'test title','tshirt1.jpeg','test author','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAIAQMAAAD+wSzIAAAABlBMVEX///+/v7+jQ3Y5AAAADklEQVQI12P4AIX8EAgALgAD/aNpbtEAAAAASUVORK5CYII');

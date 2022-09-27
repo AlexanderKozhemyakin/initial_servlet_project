@@ -22,6 +22,32 @@ import java.util.Collection;
 public class FileUploadServlet extends HttpServlet {
 
     @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+        final Collection<Part> parts = request.getParts();
+        final PrintWriter printWriter = response.getWriter();
+
+        if(parts.isEmpty()){
+            printWriter.print("no parts provided");
+        }else{
+            for(Part part: parts){
+                final String submittedFileName = part.getSubmittedFileName();
+                final String partName = part.getName();
+
+                if(submittedFileName.isBlank()){
+                    printWriter.printf("File name is empty for %s", partName);
+                }else{
+                    printWriter.printf("getSubmittedFileName: %s, ", submittedFileName);
+                    printWriter.printf("getName: %s, ", partName);
+
+                    part.write(submittedFileName);
+
+                    printWriter.printf("The file %s uploaded sucessfully.", submittedFileName);
+                }
+            }
+        }
+        printWriter.close();
+    }
+    @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
 
         final Collection<Part> parts = request.getParts();
