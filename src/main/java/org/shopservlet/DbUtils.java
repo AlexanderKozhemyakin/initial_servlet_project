@@ -13,7 +13,7 @@ import java.sql.SQLException;
 
 public class DbUtils {
 
-    private static final String DBURL="jdbc:h2:/root/db/shopapp";
+    private static final String DBURL="jdbc:h2:tcp://localhost/~/test";//jdbc:h2:/root/db/shopapp";
     private static final String DBUSERNAME="sa";
     private static final String DBPASSWORD="as777";
     private static final String DRIVERNAME="org.h2.Driver";
@@ -32,15 +32,15 @@ public class DbUtils {
     public static Connection getConnection(){
         return connection;
     }
-    public static void dbCleanUp(Connection connection, Statement statement, ResultSet resultSet){
-        if (connection!=null){
-            try{
-                connection.close();
-            }catch(SQLException e){
-                e.printStackTrace();
-            }
-        }
-    }
+//    public static void dbCleanUp(Connection connection, Statement statement, ResultSet resultSet){
+//        if (connection!=null){
+//            try{
+//                connection.close();
+//            }catch(SQLException e){
+//                e.printStackTrace();
+//            }
+//        }
+//    }
     public static void printSQLException(SQLException ex) {
         for (Throwable e: ex) {
             if (e instanceof SQLException) {

@@ -34,9 +34,7 @@ public class LoginValidate {
 
         } catch (Exception e){
             e.printStackTrace();
-        } finally {
-            DbUtils.dbCleanUp(connection, preparedStatement, resultSet);
         }
-       return userFounded;
+        return userFounded;
     }
 }

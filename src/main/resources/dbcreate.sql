@@ -35,11 +35,11 @@ create table PRODUCTS_PICTURES (
                                    image blob
 );
 
-insert into products(id,name,desc) values (1,'T-SHIRT 1','test good1');
-insert into products(id,name,desc) values (2,'T-SHIRT 2','test good2');
-insert into products(id,name,desc) values (3,'T-SHIRT 3','test good3');
-insert into products(id,name,desc) values (4,'T-SHIRT 4','test good4');
-insert into products(id,name,desc) values (5,'T-SHIRT 5','test good5');
+insert into products(id,name,desc) values (1,'tshirt1','test good1');
+insert into products(id,name,desc) values (2,'tshirt2','test good2');
+insert into products(id,name,desc) values (3,'tshirt3','test good3');
+insert into products(id,name,desc) values (4,'tshirt4','test good4');
+insert into products(id,name,desc) values (5,'tshirt5','test good5');
 
 insert into WEBUSERS(USERNAME,PASSWORD,NAME,LASTNAME,ADDRESS,EMAIL,CONTACTNUMBER ) values ('test','test','test','test','test','test@test.ru','test');
 

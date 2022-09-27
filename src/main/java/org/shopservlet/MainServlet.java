@@ -11,6 +11,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 import java.util.Base64;
 import java.util.Optional;
 
@@ -60,7 +61,7 @@ public class MainServlet extends HttpServlet {
                 }
             }
             class CatalogController{
-                void show() throws IOException, ServletException {
+                void show() throws IOException, ServletException, SQLException {
                     PrintWriter pw = response.getWriter();
                     pw.println(ProductCatalog.showProductsPage());
 
@@ -104,7 +105,7 @@ public class MainServlet extends HttpServlet {
                     pw.println("577");
                 }
             }
-            void process(String url) throws ServletException, IOException {
+            void process(String url) throws ServletException, IOException, SQLException {
                 if (url.startsWith("/main?cart")){
                     new CartController().show();
                 } else if (url.startsWith("/main?catalog")){
@@ -133,14 +134,14 @@ public class MainServlet extends HttpServlet {
         if (requestedUrl.isEmpty()){
             try {
                 new DispatcherServlet().process("/main?catalog");
-            } catch (ServletException | IOException e) {
+            } catch (ServletException | IOException | SQLException e) {
                 throw new RuntimeException(e);
             }
 
         } else {
             try {
                 new DispatcherServlet().process(requestedUrl);
-            } catch (ServletException | IOException e) {
+            } catch (ServletException | IOException | SQLException e) {
                 throw new RuntimeException(e);
             }
         }
