@@ -13,7 +13,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
 public class DdInitialize {
-    final ConnectionPoolTest source;
+    final ConnectionPoolHandler source;
 
     private String parseSqlFromFile(String name) throws IOException {
         try(BufferedReader bufferedReader = new BufferedReader(
@@ -23,7 +23,7 @@ public class DdInitialize {
                 }
     }
     public void executeSql() throws SQLException, IOException{
-        String sql = parseSqlFromFile("dbcreate.sql");
+        String sql = parseSqlFromFile("/resources/dbcreate.sql");
         source.statement(stmt->{
             stmt.execute(sql);
         });
