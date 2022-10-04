@@ -17,3 +17,5 @@ target/
 *.zip
 *.rar
 *.lst
+Test*.java
+*Test.java
